@@ -1,0 +1,49 @@
+<div class="row">
+    <!-- left column -->
+    <div class="col-md-6">
+        <form role="form">
+            <div class="box-body">
+
+                <div class="form-group" role="main">
+                    <label for="nome">Nome</label>
+                    <input id="nome" name="nome" [(ngModel)]="cliente.nome" class="form-control" />
+                </div>
+                <div class="form-group" role="main">
+                    <label for="valor">Endereço</label>
+                    <input id="endereco" name="endereco" [(ngModel)]="cliente.endereco" class="form-control" />
+
+
+                </div>
+
+                <div class="form-group" role="main">
+                    <label for="CPF">CPF</label>
+                    <input id="cpf" name="cpf" [(ngModel)]="cliente.cpf" class="form-control" />
+
+
+                </div>
+                <div class="form-group" role="main">
+                    <button (click)="salvar()" class="btn btn-block btn-primary">Salvar</button>
+                </div>
+
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Endereço</th>
+                        </tr>
+                    </thead>
+                    <tr *ngFor="let c of clientes">
+                        <td>{{c.nome}}</td>
+                        <td>{{c.endereco}}</td>
+                        <td>{{c.cpf | cpf}}</td>
+                        <td><button (click) = "editar(c)">Editar</button></td>
+                        <td><button (click) = "deletar(c.id)">Deletar</button></td>
+                    </tr>
+
+                </table>
+
+
+            </div>
+        </form>
+    </div>
+</div>
