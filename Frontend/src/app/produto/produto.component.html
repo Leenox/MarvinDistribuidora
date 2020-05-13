@@ -11,8 +11,10 @@
                 <div class="form-group" role="main">
                     <label for="valor">Valor</label>
                     <input id="valor" name="valor" [(ngModel)]="produto.valor" class="form-control" />
-
-
+                </div>
+                <div class="form-group" role="main">
+                    <label for="valor">Tipo</label>
+                    <input id="tipo" name="tipo" [(ngModel)]="produto.tipo" class="form-control" />
                 </div>
                 <div class="form-group" role="main">
                     <button (click)="salvar()" class="btn btn-block btn-primary">Salvar</button>
@@ -22,6 +24,7 @@
                     <thead>
                         <tr>
                             <th>Nome</th>
+                            <th>Tipo</th>
                             <th>Valor</th>
                         </tr>
                     </thead>
