@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MapsComponent } from './maps.component';
 import { NotificationsComponent } from './notifications.component';
 
 describe('NotificationsComponent', () => {
